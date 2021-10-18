@@ -4,4 +4,5 @@
     <string name="title_log_in">LogIn</string>
     <string name="title_welcome">Welcome</string>
     <string name="title_instructions">Instructions</string>
+    <string name="title_shoe_list">ShoeList</string>
 </resources>
