@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import com.udacity.shoestore.R
-import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 
-class ShoeListFragment : Fragment(R.layout.fragment_shoe_list) {
-    private var _binding: FragmentShoeListBinding? = null
+class ShoeDetailFragment : Fragment(R.layout.fragment_shoe_detail) {
+
+    private var _binding: FragmentShoeDetailBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,16 +18,12 @@ class ShoeListFragment : Fragment(R.layout.fragment_shoe_list) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentShoeListBinding.inflate(inflater, container, false)
+        _binding = FragmentShoeDetailBinding.inflate(inflater, container, false)
         _binding?.lifecycleOwner = this
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtTest.setOnClickListener {
-            it.findNavController()
-                .navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
-        }
     }
 }
