@@ -9,5 +9,15 @@
         android:id="@+id/logInFragment"
         android:name="com.udacity.shoestore.ui.login.LogInFragment"
         android:label="@string/title_log_in"
-        tools:layout="@layout/fragment_log_in" />
+        tools:layout="@layout/fragment_log_in">
+        <action
+            android:id="@+id/action_logInFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.udacity.shoestore.ui.welcome.WelcomeFragment"
+        android:label="@string/title_welcome"
+        tools:layout="@layout/fragment_welcome" />
 </navigation>
