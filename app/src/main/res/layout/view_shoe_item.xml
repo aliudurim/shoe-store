@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txtShowItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/size_60"
+    android:padding="@dimen/space_8"
+    android:textColor="@color/black"
+    android:textSize="@dimen/text_size_16"
+    tools:text="@string/show_list_item_dummy_text" />
