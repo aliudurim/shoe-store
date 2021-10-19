@@ -6,4 +6,9 @@
     <string name="title_instructions">Instructions</string>
     <string name="title_shoe_list">ShoeList</string>
     <string name="title_shoe_detail">ShoeDetail</string>
+    <!-- LogIn labels -->
+    <string name="log_in_ed_email_hint">Email</string>
+    <string name="log_in_ed_password_hint">Password</string>
+    <string name="log_in_btn_text">LogIn</string>
+    <string name="log_in_btn_create_account_text">Create Account</string>
 </resources>

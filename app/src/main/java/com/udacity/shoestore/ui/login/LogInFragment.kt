@@ -26,7 +26,11 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtTest.setOnClickListener {
+        binding.btnLogIn.setOnClickListener {
+            view.findNavController()
+                .navigate(LogInFragmentDirections.actionLogInFragmentToWelcomeFragment())
+        }
+        binding.btnCreateAccount.setOnClickListener {
             view.findNavController()
                 .navigate(LogInFragmentDirections.actionLogInFragmentToWelcomeFragment())
         }
