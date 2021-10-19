@@ -25,7 +25,7 @@ class ShoeListFragment : Fragment(R.layout.fragment_shoe_list) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtTest.setOnClickListener {
+        binding.fabAddShow.setOnClickListener {
             it.findNavController()
                 .navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
