@@ -5,18 +5,144 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/purple_700">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txtTest"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ilName"
+            android:layout_width="@dimen/size_0"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="Hello World!"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            app:layout_constraintBottom_toTopOf="@+id/ilCompany"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/shoe_detail_ed_name_hint"
+                android:singleLine="true"
+                android:textColor="@color/material_on_surface_emphasis_high_type"
+                android:textColorHint="@color/material_on_surface_emphasis_high_type"
+                android:textSize="@dimen/text_size_18"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ilCompany"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            app:layout_constraintBottom_toTopOf="@+id/ilSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ilName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/shoe_detail_ed_company_hint"
+                android:singleLine="true"
+                android:textColor="@color/material_on_surface_emphasis_high_type"
+                android:textColorHint="@color/material_on_surface_emphasis_high_type"
+                android:textSize="@dimen/text_size_18"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ilSize"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            app:layout_constraintBottom_toTopOf="@+id/ilDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ilCompany">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/shoe_detail_ed_size_hint"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/material_on_surface_emphasis_high_type"
+                android:textColorHint="@color/material_on_surface_emphasis_high_type"
+                android:textSize="@dimen/text_size_18"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ilDescription"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            app:layout_constraintBottom_toTopOf="@+id/btnCancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ilSize">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/shoe_detail_ed_desc_hint"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/material_on_surface_emphasis_high_type"
+                android:textColorHint="@color/material_on_surface_emphasis_high_type"
+                android:textSize="@dimen/text_size_18"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_60"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/space_4"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:insetTop="@dimen/size_0"
+            android:insetBottom="@dimen/size_0"
+            android:text="@string/shoe_detail_btn_cancel_text"
+            android:textColor="?colorOnPrimary"
+            android:textSize="@dimen/text_size_16"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/btnSave"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_60"
+            android:layout_marginStart="@dimen/space_4"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:insetTop="@dimen/size_0"
+            android:insetBottom="@dimen/size_0"
+            android:text="@string/shoe_detail_btn_add_text"
+            android:textColor="?colorOnPrimary"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnCancel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
