@@ -21,6 +21,7 @@
     <string name="instruction_btn_text">Next</string>
     <!-- ShowList labels -->
     <string name="show_list_fab_content_text">Add New</string>
+    <string name="show_list_log_out_text">Logout</string>
     <!-- ShoeDetail labels -->
     <string name="shoe_detail_ed_name_hint">Shoe Name</string>
     <string name="shoe_detail_ed_company_hint">Company</string>

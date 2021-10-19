@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(
             this, R.layout.activity_main
         )
+        setSupportActionBar(binding.toolBar)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.logInFragment,
