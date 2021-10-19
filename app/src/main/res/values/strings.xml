@@ -15,4 +15,8 @@
     <string name="welcome_txt_title_text">Welcome!</string>
     <string name="welcome_txt_subtitle_text">Here you will learn to develop profession android application with our tutorials, examples, tips and tricks, ux/ui design etc. These all tutorial and examples are available at free of cost. \n\nEither you are beginner or expert android developer we provide best tutorial and examples to you.</string>
     <string name="welcome_btn_text">Next</string>
+    <!-- Instruction labels -->
+    <string name="instruction_txt_title_text">Instruction!</string>
+    <string name="instruction_txt_subtitle_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="instruction_btn_text">Next</string>
 </resources>
