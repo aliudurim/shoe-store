@@ -5,18 +5,55 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/teal_700">
+        android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txtTest"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtTitle"
+            android:layout_width="@dimen/size_0"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/space_64"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:text="@string/welcome_txt_title_text"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_32"
+            app:layout_constrainedWidth="true"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSubTitle"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/space_64"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:text="@string/welcome_txt_subtitle_text"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:drawableEnd="@drawable/ic_navigate_next"
+            android:insetTop="@dimen/size_0"
+            android:insetBottom="@dimen/size_0"
+            android:text="@string/welcome_btn_text"
+            android:textColor="?colorPrimary"
+            android:textSize="@dimen/text_size_16"
+            app:drawableTint="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

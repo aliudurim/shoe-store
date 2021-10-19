@@ -11,4 +11,8 @@
     <string name="log_in_ed_password_hint">Password</string>
     <string name="log_in_btn_text">LogIn</string>
     <string name="log_in_btn_create_account_text">Create Account</string>
+    <!-- Welcome labels -->
+    <string name="welcome_txt_title_text">Welcome!</string>
+    <string name="welcome_txt_subtitle_text">Here you will learn to develop profession android application with our tutorials, examples, tips and tricks, ux/ui design etc. These all tutorial and examples are available at free of cost. \n\nEither you are beginner or expert android developer we provide best tutorial and examples to you.</string>
+    <string name="welcome_btn_text">Next</string>
 </resources>
