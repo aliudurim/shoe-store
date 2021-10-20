@@ -23,6 +23,9 @@
     <string name="show_list_fab_content_text">Add New</string>
     <string name="show_list_log_out_text">Logout</string>
     <string name="show_list_item_dummy_text">Show Item</string>
+    <string name="show_list_log_out_cancel">Cancel</string>
+    <string name="show_list_log_out_ok">OK</string>
+    <string name="show_list_log_out_message">Are you sure you want to log out!</string>
     <!-- ShoeDetail labels -->
     <string name="shoe_detail_ed_name_hint">Shoe Name</string>
     <string name="shoe_detail_ed_company_hint">Company</string>

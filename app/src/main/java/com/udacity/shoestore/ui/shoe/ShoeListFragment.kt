@@ -1,5 +1,6 @@
 package com.udacity.shoestore.ui.shoe
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -38,6 +39,20 @@ class ShoeListFragment : Fragment(R.layout.fragment_shoe_list) {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.log_out -> {
+                AlertDialog.Builder(requireContext()).apply {
+                    setTitle(R.string.app_name)
+                    setMessage(R.string.show_list_log_out_message)
+                    setPositiveButton(R.string.show_list_log_out_ok) { d, _ ->
+                        view?.findNavController()
+                            ?.navigate(ShoeListFragmentDirections.actionShoeListFragmentToLogInFragment())
+                        d.dismiss()
+                    }
+                    setNegativeButton(R.string.show_list_log_out_cancel) { d, _ ->
+                        d.dismiss()
+                    }
+                    show()
+                }
+
                 true
             }
             else -> super.onOptionsItemSelected(item)
