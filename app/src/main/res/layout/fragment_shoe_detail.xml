@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.ui.shoe.ShoeDetailViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/shoe_detail_ed_name_hint"
                 android:singleLine="true"
+                android:text="@={viewModel.shoeNameTextContent}"
                 android:textColor="@color/material_on_surface_emphasis_high_type"
                 android:textColorHint="@color/material_on_surface_emphasis_high_type"
                 android:textSize="@dimen/text_size_18"
@@ -51,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/shoe_detail_ed_company_hint"
                 android:singleLine="true"
+                android:text="@={viewModel.companyTextContent}"
                 android:textColor="@color/material_on_surface_emphasis_high_type"
                 android:textColorHint="@color/material_on_surface_emphasis_high_type"
                 android:textSize="@dimen/text_size_18"
@@ -75,8 +84,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shoe_detail_ed_size_hint"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true"
+                android:text="@={viewModel.shoeSizeTextContent}"
                 android:textColor="@color/material_on_surface_emphasis_high_type"
                 android:textColorHint="@color/material_on_surface_emphasis_high_type"
                 android:textSize="@dimen/text_size_18"
@@ -101,8 +111,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shoe_detail_ed_desc_hint"
-                android:inputType="number"
                 android:singleLine="true"
+                android:text="@={viewModel.descriptionTextContent}"
                 android:textColor="@color/material_on_surface_emphasis_high_type"
                 android:textColorHint="@color/material_on_surface_emphasis_high_type"
                 android:textSize="@dimen/text_size_18"
@@ -119,6 +129,7 @@
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
             android:insetTop="@dimen/size_0"
             android:insetBottom="@dimen/size_0"
+            android:onClick="@{() -> viewModel.cancel()}"
             android:text="@string/shoe_detail_btn_cancel_text"
             android:textColor="?colorOnPrimary"
             android:textSize="@dimen/text_size_16"
@@ -137,6 +148,7 @@
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
             android:insetTop="@dimen/size_0"
             android:insetBottom="@dimen/size_0"
+            android:onClick="@{() -> viewModel.createShoe()}"
             android:text="@string/shoe_detail_btn_add_text"
             android:textColor="?colorOnPrimary"
             android:textSize="@dimen/text_size_16"
