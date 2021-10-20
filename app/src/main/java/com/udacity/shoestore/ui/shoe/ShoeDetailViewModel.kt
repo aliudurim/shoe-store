@@ -2,6 +2,7 @@ package com.udacity.shoestore.ui.shoe
 
 import androidx.lifecycle.*
 import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.utils.mediatorLiveData
 import kotlinx.coroutines.launch
 
 class ShoeDetailViewModel : ViewModel() {
@@ -22,6 +23,26 @@ class ShoeDetailViewModel : ViewModel() {
     val companyTextContent = MutableLiveData<String>()
     val shoeSizeTextContent = MutableLiveData<String>()
     val descriptionTextContent = MutableLiveData<String>()
+
+    private val hasName: LiveData<Boolean>
+        get() = Transformations.map(shoeNameTextContent) {
+            !it.isNullOrBlank()
+        }
+    private val hasCompany: LiveData<Boolean>
+        get() = Transformations.map(companyTextContent) {
+            !it.isNullOrBlank()
+        }
+    private val hasShoeSize: LiveData<Boolean>
+        get() = Transformations.map(shoeSizeTextContent) {
+            !it.isNullOrBlank()
+        }
+    private val hasDescription: LiveData<Boolean>
+        get() = Transformations.map(descriptionTextContent) {
+            !it.isNullOrBlank()
+        }
+
+    val allowToSaveShoe: LiveData<Boolean>
+        get() = mediatorLiveData(listOf(hasName, hasCompany, hasShoeSize, hasDescription))
 
     fun createShoe() {
         viewModelScope.launch {
