@@ -6,8 +6,6 @@ import com.udacity.shoestore.persistence.ShoePreferences
 import com.udacity.shoestore.utils.isValidEmail
 import com.udacity.shoestore.utils.mediatorLiveData
 import kotlinx.coroutines.launch
-import java.util.regex.Matcher
-import java.util.regex.Pattern
 
 class LogInViewModel : ViewModel() {
 
@@ -30,29 +28,10 @@ class LogInViewModel : ViewModel() {
             isValidEmail(it)
         }
 
-    private val hasEightCharacter: LiveData<Boolean>
-        get() = Transformations.map(passwordTextContent) {
-            val eight: Pattern = Pattern.compile(".{8}")
-            val hasEight: Matcher = eight.matcher(it)
-            hasEight.find()
-        }
-
-    private val hasSpecialCharacter: LiveData<Boolean>
-        get() = Transformations.map(passwordTextContent) {
-            val special: Pattern = Pattern.compile("[!@#\$%&*()_+=|<>?{}\\\\[\\\\]~-]")
-            val hasSpecial: Matcher = special.matcher(it)
-            hasSpecial.find()
-        }
-
-    private val hasDigitCharacter: LiveData<Boolean>
-        get() = Transformations.map(passwordTextContent) {
-            val digit: Pattern = Pattern.compile("[0-9]")
-            val hasDigit: Matcher = digit.matcher(it)
-            hasDigit.find()
-        }
-
     private val hasValidPassword: LiveData<Boolean>
-        get() = mediatorLiveData(listOf(hasEightCharacter, hasSpecialCharacter, hasDigitCharacter))
+        get() = Transformations.map(passwordTextContent) {
+            !it.isNullOrBlank()
+        }
 
     val allowToLogIn: LiveData<Boolean> =
         mediatorLiveData(listOf(hasValidEmail, hasValidPassword))
